@@ -1,20 +1,8 @@
-// See https://github.com/julia-vscode/julia-devcontainer/blob/master/Dockerfile for image contents
+// For format details, see Development Containers Community at https://github.com/devcontainers
 {
-	"name": "Julia (Community)",
-	"image": "ghcr.io/julia-vscode/julia-devcontainer",
-
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"julialang.language-julia"
-			]
-		}
-	},
-
-	"postCreateCommand": "/julia-devcontainer-scripts/postcreate.jl",
-
-	"remoteUser": "vscode"
+	"name": "Codespaces",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	}
 }
