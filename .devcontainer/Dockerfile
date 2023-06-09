@@ -1,7 +1,7 @@
 # See here for a repo gallery of platform specific folder examples: 
 # https://github.com/devcontainers
 
-FROM julia:1.9
+FROM julia:1.9-bullseye
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 #COPY requirements.txt /tmp/pip-tmp/
