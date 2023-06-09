@@ -1,25 +1,9 @@
-# See here for a repo gallery of platform specific folder examples: 
-# https://github.com/devcontainers
-
-FROM mcr.microsoft.com/devcontainers/miniconda3
-
-# [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
-#COPY requirements.txt /tmp/pip-tmp/
-#RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
-#    && rm -rf /tmp/pip-tmp
+FROM continuumio/anaconda3
 RUN apt-get update
+RUN conda install -c conda-forge jupyterlab
 
-
-# [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update \
-#     && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
-
-# [Optional] Allow the vscode user to pip install globally w/o sudo
-# ENV PIP_TARGET=/usr/local/pip-global
-# ENV PYTHONPATH=${PIP_TARGET}:${PYTHONPATH}
-# ENV PATH=${PIP_TARGET}/bin:${PATH}
-# RUN mkdir -p ${PIP_TARGET} \
-#     && chown vscode:root ${PIP_TARGET} \
-#     && echo "if [ \"\$(stat -c '%U' ${PIP_TARGET})\" != \"vscode\" ]; then chown -R vscode:root ${PIP_TARGET}; fi" \
-#         | tee -a /root/.bashrc /home/vscode/.bashrc /root/.zshrc >> /home/vscode/.zshrc 
+RUN wget -P /tmp/ https://julialang-s3.julialang.org/bin/linux/x64/1.8/julia-1.8.1-linux-x86_64.tar.gz 
+#RUN tar -xvzf julia-1.8.1-linux-x86_64.tar.gz
+#RUN sudo mv julia-1.8.1/ /opt/
+#RUN ln -s /opt/julia-1.8.1/bin/julia /usr/local/bin/julia
+#RUN julia -e 'using Pkg; Pkg.add("dependencies.jl")'
