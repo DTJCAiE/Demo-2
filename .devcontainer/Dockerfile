@@ -1,8 +1,7 @@
 # See here for a repo gallery of platform specific folder examples: 
 # https://github.com/devcontainers
 
-ARG VARIANT="3"
-FROM mcr.microsoft.com/devcontainers/anaconda:0-${VARIANT}
+FROM julia:latest
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 #COPY requirements.txt /tmp/pip-tmp/
