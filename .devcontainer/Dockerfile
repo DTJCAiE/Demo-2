@@ -1,12 +1,14 @@
 # See here for a repo gallery of platform specific folder examples: 
 # https://github.com/devcontainers
 
-FROM julia:1.9-bullseye
+FROM continuumio/miniconda3
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 #COPY requirements.txt /tmp/pip-tmp/
 #RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
 #    && rm -rf /tmp/pip-tmp
+RUN apt-get update
+
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update \
