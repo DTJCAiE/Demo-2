@@ -1,3 +1,6 @@
+#https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+#https://docs.docker.com/engine/reference/builder/#env
+
 FROM continuumio/miniconda3
 RUN apt-get update
 #RUN conda install -c conda-forge jupyterlab
