@@ -1,4 +1,7 @@
+using Pkg
+
 dependencies = [
-    name="IJulia", version = "1.24.2",
-    "Genie"
+    PackageSpec(name="IJulia", version="1.24.2")
 ]
+
+Pkg.add(dependencies)
