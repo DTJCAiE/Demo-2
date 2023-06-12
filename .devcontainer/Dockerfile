@@ -4,7 +4,10 @@
 # Obtain Official Julia image 
 FROM julia:1.6.7-bullseye
 
+# Set the working directory inside the container
 WORKDIR /app
+
+# Copy the current directory contents into the container at /work
 COPY . /app
 
 # Install required packages
@@ -13,6 +16,7 @@ RUN julia -e 'include("dependencies.jl")'
 RUN apt-get update \
 && apt-get install -y build-essential \
 && apt-get install -y wget \
+&& apt-get install -y curl \
 && apt-get install -y git 
 #&& apt-get clean \
 #&& rm -rf /var/lib/apt/lists/*
@@ -28,4 +32,10 @@ ENV PATH=$CONDA_DIR/bin:$PATH
 # Install Jupyter lab for interactive notebook 
 RUN conda install -c conda-forge jupyterlab
 
-ENTRYPOINT ["julia"]
+# Expose port 8888 for JupyterLab
+EXPOSE 8888
+
+# Launch JupyterLab when the container starts
+#CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+
+ENTRYPOINT ["jupyter"]
