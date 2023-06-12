@@ -30,12 +30,16 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
 ENV PATH=$CONDA_DIR/bin:$PATH
 
 # Install Jupyter lab for interactive notebook 
-RUN conda install -c conda-forge jupyterlab
+RUN conda install -y -c conda-forge jupyterlab notebook
+
+# Install Jupyter Server and necessary extensions
+RUN conda install -y -c conda-forge jupyter_server jupyterlab-git
+RUN pip install -y jupyter_collaboration
 
 # Expose port 8888 for JupyterLab
 EXPOSE 8888
 
 # Launch JupyterLab when the container starts
 #CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
-
-ENTRYPOINT ["jupyter"]
+#CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+#ENTRYPOINT ["jupyter"]
