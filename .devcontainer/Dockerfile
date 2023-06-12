@@ -34,7 +34,7 @@ RUN conda install -y -c conda-forge jupyterlab notebook
 
 # Install Jupyter Server and necessary extensions
 RUN conda install -y -c conda-forge jupyter_server jupyterlab-git
-RUN pip install -y jupyter_collaboration
+RUN pip install --no-cache-dir --quiet jupyter_collaboration
 
 # Expose port 8888 for JupyterLab
 EXPOSE 8888
