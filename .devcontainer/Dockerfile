@@ -10,7 +10,10 @@ RUN wget --quiet https://julialang-s3.julialang.org/bin/linux/x64/1.6/julia-1.6.
 && rm julia-1.6.7-linux-x86_64.tar.gz \
 && mv julia-1.6.7/ /opt/
 RUN ln -s /opt/julia-1.6.7/bin/julia /usr/local/bin/julia
-#RUN julia -e "include(\"dependencies.jl\")"
 
-#WORKDIR /usr/local/src/app/program
+WORKDIR /app
+COPY . /app
+
+RUN julia -e 'include("dependencies.jl")'
+
 ENTRYPOINT ["julia"]
