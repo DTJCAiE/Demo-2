@@ -21,6 +21,10 @@ RUN apt-get update \
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# Download the data file from source
+RUN wget --quiet https://dataverse.harvard.edu/api/access/datafile/5259483 -O /tmp/usa1.csv \
+&& mv /tmp/usa1.csv .
+
 # Install miniconda
 ENV CONDA_DIR /opt/conda
 RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh \
