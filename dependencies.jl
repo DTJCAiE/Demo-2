@@ -8,7 +8,7 @@ dependencies = [
     PackageSpec(name="CSV", version="0.10.11"),
     PackageSpec(name="DataFrames", version="1.5.0"),
     PackageSpec(name="SpecialFunctions", version="2.2.0"),
-    PackageSpec(name="Statistics", version=""),
+    PackageSpec("Statistics"),
     PackageSpec(name="NLsolve", version="4.5.1"),
     PackageSpec(name="Optim", version="1.7.6"),
     PackageSpec(name="KernelDensity", version="0.6.7"),
