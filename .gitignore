@@ -1,0 +1,6 @@
+# Directories
+*/.ipynb_checkpoints/
+
+# Logs and databases
+usa1.csv
+*csv

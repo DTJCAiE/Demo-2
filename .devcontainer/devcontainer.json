@@ -2,13 +2,16 @@
 {
 	"name": "Codespaces",
 	"build": {
-		"dockerfile": "Dockerfile",
-		"context": ".."
+		"dockerfile": "../Dockerfile",
+		"context": ".."		
 	},
+	"workspaceFolder": "/app",
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"julialang.language-julia",
+				"ms-toolsai.jupyter"
 			]
 		}
 	}

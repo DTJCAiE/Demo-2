@@ -1,10 +1,30 @@
-# Introduction
+# Overview
 
 This repository contains the replication programs for [Alvarez, Lippi, and Oskolkov (2022)](https://doi.org/10.1093/qje/qjab042). The replication exercise is conducted for Ottawa Replication Games on May 5, 2023 at the University of Ottawa.
 
+# How to execute
+
+1. **Build the Docker image**. Open a terminal or command prompt, navigate to the directory containing the Dockerfile, and run the following command to build the Docker image. 
+This process will install Julia, JupyterLab, and other required dependencies. 
+*Note: instead of storing the data file in the repository, the Docker container building process will download the data file from Harvard Dataverse on the fly.*
+````bash
+docker build -t replication-games
+````
+
+
+2. **Launch the Docker container**. After the build process completes, run the following command
+````bash
+docker run --name my_jupyterlab -p 8888:8888 replication-games
+````
+
+> **Note:** Alternatively, users can launch a dev container through GitHub Codespaces. See GitHub documentation for [more](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository).
+
 # Files
 
-TBA
+- `Dockerfile` contains the code for building the Docker container to execute the program. 
+> **Note:** For GitHub Codespaces, you will also need the `.devcontainer` folder that contains additional Codespaces configuration.
+
+- `dependencies.jl` is a Julia file that contains a list of required packages for the program. It will be executed in the Docker image building process.
 
 # References
 
