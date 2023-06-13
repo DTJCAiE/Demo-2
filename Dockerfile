@@ -18,30 +18,25 @@ RUN apt-get update \
 && apt-get install -y wget \
 && apt-get install -y curl \
 && apt-get install -y git 
-#&& apt-get clean \
-#&& rm -rf /var/lib/apt/lists/*
+
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install miniconda
-#ENV CONDA_DIR /opt/conda
-#RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh \
-#&& /bin/bash ~/miniconda.sh -b -p /opt/conda
+ENV CONDA_DIR /opt/conda
+RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh \
+&& /bin/bash ~/miniconda.sh -b -p /opt/conda
 
 # Put conda in path so we can use conda activate
-#ENV PATH=$CONDA_DIR/bin:$PATH
+ENV PATH=$CONDA_DIR/bin:$PATH
 
 # Install Jupyter lab for interactive notebook 
-#RUN conda install -y -c conda-forge nodejs jupyterlab notebook
+RUN conda install -y -c conda-forge nodejs jupyterlab notebook
 
 # Install Jupyter Server and necessary extensions
-#RUN conda install -y -c conda-forge jupyter_server jupyterlab-git
-#RUN pip install --no-cache-dir --quiet jupyter_collaboration
+RUN conda install -y -c conda-forge jupyter_server jupyterlab-git
 
 # Expose port 8888 for JupyterLab
-#EXPOSE 8888
-
-
+EXPOSE 8888
 
 # Launch JupyterLab when the container starts
-#CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
-#CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
-#ENTRYPOINT ["jupyter"]
+ENTRYPOINT ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
