@@ -17,7 +17,7 @@ docker build -t replication-games
 docker run --name my_jupyterlab -p 8888:8888 replication-games
 ````
 
-> **Note:** Alternatively, users can launch the container through GitHub Codespaces. See GitHub documentation for [more](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository).
+> **Note:** Alternatively, users can launch a dev container through GitHub Codespaces. See GitHub documentation for [more](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository).
 
 # Files
 
