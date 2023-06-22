@@ -24,7 +24,6 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 # Download the data file from source
 RUN mkdir ./data \
 && wget --quiet https://dataverse.harvard.edu/api/access/datafile/5259483 -O ./data/usa1.csv
-#&& mv /tmp/usa1.csv ./data/
 
 # Install miniconda
 ENV CONDA_DIR /opt/conda
