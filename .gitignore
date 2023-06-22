@@ -2,5 +2,5 @@
 */.ipynb_checkpoints/
 
 # Logs and databases
-usa1.csv
 *csv
+!categories_big_table.csv
