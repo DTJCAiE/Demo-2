@@ -11,13 +11,12 @@ This process will install Julia, JupyterLab, and other required dependencies.
 docker build -t replication-games
 ````
 
-
 2. **Launch the Docker container**. After the build process completes, run the following command
 ````bash
 docker run --name my_jupyterlab -p 8888:8888 replication-games
 ````
 
-> **Note:** Alternatively, users can launch a dev container through GitHub Codespaces. See GitHub documentation for [more](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository).
+> **Note:** Users can launch a dev container through GitHub Codespaces as an alternative. See GitHub documentation for [more](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository).
 
 # Files
 
@@ -25,6 +24,15 @@ docker run --name my_jupyterlab -p 8888:8888 replication-games
 > **Note:** For GitHub Codespaces, you will also need the `.devcontainer` folder that contains additional Codespaces configuration.
 
 - `dependencies.jl` is a Julia file that contains a list of required packages for the program. It will be executed in the Docker image building process.
+
+- `reproduction` folder contains the program for reproducing the empirical estimates in [Alvarez et al (2021)](). It includes the following subfolders:
+    - `rep_original`: program to reproduce the original authors' estimates, with edits made for the replication program available at Harvard Dataverse [data archive]()
+    - `rep_20prct`: program with bootstrapping repetition reduced to 20% of the original program
+    - `rep_50prct`
+    - `rep_200prct`
+    - `rep_500prct`
+
+- `replication` folder contains the program for re-estimating [Alvarez et al (2021)]() using the data cleaning criteria in Cavallo (2018).
 
 # References
 
