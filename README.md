@@ -22,16 +22,16 @@ docker run --name my_jupyterlab -p 8888:8888 replication-games
 
 - [Dockerfile](Dockerfile) contains the code for building the Docker container to execute the program. 
 
-- `dependencies.jl` is a Julia file that contains a list of required packages for the program. It will be executed in the Docker image building process.
+- [dependencies.jl](dependencies.jl) is a Julia file that contains a list of required packages for the program. It will be executed in the Docker image building process.
 
 - [reproduction](reproduction) folder contains the program for reproducing the empirical estimates in [Alvarez et al (2021a)](https://doi.org/10.1093/qje/qjab042). It includes the following subfolders:
-    - `rep_original`: program to reproduce the original authors' estimates, with edits made on the authors' replication program available at Harvard Dataverse [data archive](https://doi.org/10.7910/DVN/IBM0IE)
-    - `rep_20prct`: program with bootstrapping repetition reduced to 20% of the original program
-    - [rep_50prct](reproduction/rep_50orct)
-    - `rep_200prct`
-    - `rep_500prct`
+    - [rep_original](reproduction/rep_original): programs to reproduce the original authors' estimates, with edits made on the authors' replication program available at [Harvard Dataverse](https://doi.org/10.7910/DVN/IBM0IE) [(Alvarez et al, 2021b)](https://doi.org/10.7910/DVN/IBM0IE)
+    - [rep_20prct](reproduction/rep_20prct): bootstrapping repetition reduced to 20% of the original program
+    - [rep_50prct](reproduction/rep_50prct): bootstrapping repetition reduced to 50% of the original program
+    - [rep_200prct](reproduction/rep_200prct): bootstrapping repetition increased to 200% of the original program
+    - [rep_500prct](reproduction/rep_500prct): bootstrapping repetition increased to 500% of the original program
 
-- [replication](replication) folder contains the program for re-estimating [Alvarez et al (2021)]() using the data cleaning criteria in [Cavallo (2018)](https://doi.org/10.1162/REST_a_00652).
+- [replication](replication) folder contains the program for re-estimating [Alvarez et al (2021a)](https://doi.org/10.1093/qje/qjab042) using the data cleaning criteria in [Cavallo (2018)](https://doi.org/10.1162/REST_a_00652).
 
 > **Note:** For GitHub Codespaces, you will also need the `.devcontainer` folder that contains additional Codespaces configuration.
 
