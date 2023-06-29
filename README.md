@@ -1,6 +1,6 @@
 # Overview
 
-This repository contains the replication programs for [Alvarez, Lippi, and Oskolkov (2022)](https://doi.org/10.1093/qje/qjab042). The replication exercise is conducted for Ottawa Replication Games on May 5, 2023 at the University of Ottawa.
+This repository contains the replication programs for [Alvarez, Lippi, and Oskolkov (2021a)](https://doi.org/10.1093/qje/qjab042). The replication exercise is conducted for Ottawa Replication Games on May 5, 2023 at the University of Ottawa.
 
 # How to execute
 
@@ -20,24 +20,25 @@ docker run --name my_jupyterlab -p 8888:8888 replication-games
 
 # Files
 
-- `Dockerfile` contains the code for building the Docker container to execute the program. 
-> **Note:** For GitHub Codespaces, you will also need the `.devcontainer` folder that contains additional Codespaces configuration.
+- [Dockerfile](Dockerfile) contains the code for building the Docker container to execute the program. 
 
 - `dependencies.jl` is a Julia file that contains a list of required packages for the program. It will be executed in the Docker image building process.
 
-- `reproduction` folder contains the program for reproducing the empirical estimates in [Alvarez et al (2021)](). It includes the following subfolders:
-    - `rep_original`: program to reproduce the original authors' estimates, with edits made for the replication program available at Harvard Dataverse [data archive]()
+- [reproduction](reproduction) folder contains the program for reproducing the empirical estimates in [Alvarez et al (2021a)](https://doi.org/10.1093/qje/qjab042). It includes the following subfolders:
+    - `rep_original`: program to reproduce the original authors' estimates, with edits made on the authors' replication program available at Harvard Dataverse [data archive](https://doi.org/10.7910/DVN/IBM0IE)
     - `rep_20prct`: program with bootstrapping repetition reduced to 20% of the original program
-    - `rep_50prct`
+    - [rep_50prct](reproduction/rep_50orct)
     - `rep_200prct`
     - `rep_500prct`
 
-- `replication` folder contains the program for re-estimating [Alvarez et al (2021)]() using the data cleaning criteria in Cavallo (2018).
+- [replication](replication) folder contains the program for re-estimating [Alvarez et al (2021)]() using the data cleaning criteria in [Cavallo (2018)](https://doi.org/10.1162/REST_a_00652).
+
+> **Note:** For GitHub Codespaces, you will also need the `.devcontainer` folder that contains additional Codespaces configuration.
 
 # References
 
-- Alvarez, F., Lippi, F., & Oskolkov, A. (2022). The Macroeconomics of Sticky Prices with Generalized Hazard Functions, _The Quarterly Journal of Economics_, Volume 137, Issue 2, May 2022, Pages 989–1038, [https://doi.org/10.1093/qje/qjab042](https://doi.org/10.1093/qje/qjab042).
+- Alvarez, F., Lippi, F. and Oskolkov, A.: 2021a, The macroeconomics of sticky prices with generalized hazard functions, _The Quarterly Journal of Economics_, 137(2), 989–1038. [https://doi.org/10.1093/qje/qjab042](https://doi.org/10.1093/qje/qjab042).
 
-- Alvarez Fernando, Lippi Francesco, Oskolkov Aleksei, “Replication Data for: ‘The Macroeconomics of Sticky Prices with Generalized Hazard Functions’,” (2021), Harvard Dataverse, [https://doi.org/10.7910/DVN/IBM0IE](https://doi.org/10.7910/DVN/IBM0IE).
+- Alvarez, F., Lippi, F. and Oskolkov, A.: 2021b, Replication Data for: ’The Macroeconomics of Sticky Prices with Generalized Hazard Functions’, Harvard Dataverse, [https://doi.org/10.7910/DVN/IBM0IE](https://doi.org/10.7910/DVN/IBM0IE).
 
-- Alberto Cavallo; Scraped Data and Sticky Prices. The Review of Economics and Statistics 2018; 100 (1): 105–119. doi: https://doi.org/10.1162/REST_a_00652
+- Cavallo, A.: 2018, Scraped data and sticky prices, _The Review of Economics and Statistics_, 100(1), 105–119. [https://doi.org/10.1162/REST_a_00652](https://doi.org/10.1162/REST_a_00652)
