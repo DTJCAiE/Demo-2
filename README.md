@@ -1,6 +1,6 @@
 # Overview
 
-This repository contains the replication programs for [Alvarez, Lippi, and Oskolkov (2021a)](https://doi.org/10.1093/qje/qjab042). The replication exercise is conducted for Ottawa Replication Games on May 5, 2023 at the University of Ottawa.
+This repository contains the replication programs for [Alvarez, Lippi, and Oskolkov (2021a)](https://doi.org/10.1093/qje/qjab042). The replication exercise is conducted for Ottawa Replication Games on May 5, 2023 at the University of Ottawa. See [our report](Ho_Huynh_Rea_Replication_Report.pdf) for full details of the exercise and the findings. 
 
 # How to execute
 
