@@ -1,5 +1,13 @@
 # Overview
 
+This is one of the two repositories accompanying "Teaching Reproducibility and Replicability while Teaching Econometrics in the Classroom" by Anson T. Y. Ho, Kim P. Huynh, David T. Jacho-Chávez, Katie Leinenbach, and Carson H. Rea.
+
+The repository is cloned from an earlier use case for the for Ottawa Replication Games on May 5, 2023 at the University of Ottawa. See [our report](Ho_Huynh_Rea_Replication_Report.pdf) for full details of the exercise and the findings. 
+
+The original repository can be found [here](https://github.com/atyho/Ottawa-Replication-Games-2023.git).
+
+~~
+
 This repository contains the replication programs for [Alvarez, Lippi, and Oskolkov (2021a)](https://doi.org/10.1093/qje/qjab042). The replication exercise is conducted for Ottawa Replication Games on May 5, 2023 at the University of Ottawa. See [our report](Ho_Huynh_Rea_Replication_Report.pdf) for full details of the exercise and the findings. 
 
 # How to execute
