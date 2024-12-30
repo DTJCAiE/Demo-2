@@ -1,4 +1,4 @@
-# Overview
+# Demo-2
 
 This is one of the two repositories accompanying "Teaching Reproducibility and Replicability while Teaching Econometrics in the Classroom" by Anson T. Y. Ho, Kim P. Huynh, David T. Jacho-Chávez, Katie Leinenbach, and Carson H. Rea.
 
@@ -6,11 +6,11 @@ The repository is cloned from an earlier use case for the for Ottawa Replication
 
 The original repository can be found [here](https://github.com/atyho/Ottawa-Replication-Games-2023.git).
 
-~~
+## Overview
 
 This repository contains the replication programs for [Alvarez, Lippi, and Oskolkov (2021a)](https://doi.org/10.1093/qje/qjab042). The replication exercise is conducted for Ottawa Replication Games on May 5, 2023 at the University of Ottawa. See [our report](Ho_Huynh_Rea_Replication_Report.pdf) for full details of the exercise and the findings. 
 
-# How to execute
+## How to execute
 
 1. **Build the Docker image**. Open a terminal or command prompt, navigate to the directory containing the Dockerfile, and run the following command to build the Docker image. 
 This process will install Julia, JupyterLab, and other required dependencies. 
@@ -26,7 +26,7 @@ docker run --name my_jupyterlab -p 8888:8888 replication-games
 
 > **Note:** Users can launch a dev container through GitHub Codespaces as an alternative. See GitHub documentation for [more](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository).
 
-# Files
+## Files
 
 - [Dockerfile](Dockerfile) contains the code for building the Docker container to execute the program. 
 
@@ -43,7 +43,7 @@ docker run --name my_jupyterlab -p 8888:8888 replication-games
 
 > **Note:** For GitHub Codespaces, you will also need the `.devcontainer` folder that contains additional Codespaces configuration.
 
-# References
+## References
 
 - Alvarez, F., Lippi, F. and Oskolkov, A.: 2021a, The macroeconomics of sticky prices with generalized hazard functions, _The Quarterly Journal of Economics_, 137(2), 989–1038. [https://doi.org/10.1093/qje/qjab042](https://doi.org/10.1093/qje/qjab042).
 
